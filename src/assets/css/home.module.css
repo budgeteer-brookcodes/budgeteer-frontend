@@ -1,0 +1,59 @@
+.main {
+  margin: 200px 50px;
+  font-family: "Lato", sans-serif;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  font-size: 60px;
+  margin: 20px 0;
+  font-weight: lighter;
+  white-space: pre;
+}
+
+.sub {
+  font-size: 20px;
+  margin: 0;
+  font-weight: lighter;
+}
+
+.scrollingText {
+  display: flex;
+  align-items: center;
+  /* display: inline-block; */
+  /* width: 250px; */
+  /* height: 72px; */
+  /* background-color: rgb(56, 56, 243); */
+  padding: 5px 0;
+  /* margin: 0 10px; */
+  /* color: white; */
+  border-radius: 7px;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 100%;
+  }
+
+  100% {
+    opacity: 0%;
+  }
+}
+
+.scrollingText::after {
+  content: "";
+  display: inline-block;
+  background-color: black;
+  width: 4px;
+  height: 72px;
+  margin-left: 3px;
+  animation-name: blink;
+  animation-duration: 1.2s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.scrollingText:empty {
+}
